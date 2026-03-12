@@ -9,6 +9,9 @@ body {
     gap: 15px;
     padding: 15px;
     background: #f5f5f5;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.5fr 6fr 0.5fr;
 }
 header {
     background: #3498db;
@@ -18,6 +21,9 @@ header {
     justify-content: center;
     font-size: 1.5em;
     font-weight: bold;
+    display: grid;
+    grid-column: 1/span 3;
+
 }
 nav {
     background: #2ecc71;
@@ -29,6 +35,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    display: grid;
+    grid-template-rows: 0fr 0fr 2fr;
 }
 .article {
     background: white;
@@ -38,6 +46,9 @@ main {
 }
 .masonry {
     gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(7,1fr);
 }
 .masonry .grid-item {
     background: white;
@@ -46,12 +57,34 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .masonry .wide {
+    grid-column: 1/span 2;
+    grid-row: 1/span 1;
+}
+.masonry .wide2 {
+    grid-column: 1/span 2;
+    grid-row: 5/span 1;
 }
 .masonry .tall {
+    grid-row: 2/span 2;
+}
+.masonry .tall2 {
+    grid-row: 6/span 2;
 }
 .masonry .large {
+    grid-column: 2/span 2;
+    grid-row: 3/span 2;
 }
 .masonry .small {
+    grid-row: 2;
+}
+.masonry .small2 {
+    grid-row: 5;
+}
+.masonry .common{
+    grid-row: 1;
+}
+.masonry .common2{
+    grid-row: 4;
 }
 aside {
     background: #f39c12;
@@ -65,4 +98,6 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 1.2em;
+    display: grid;
+    grid-column: 1/span 3;
 }
